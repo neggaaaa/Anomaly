@@ -1,11 +1,11 @@
-const BACKEND_URL = "https://anomaly-api.onrender.com";
+const BACKEND_URL = "http://127.0.0.1:8000";
 
 export const uploadFile = async (file) => {
   const formData = new FormData();
   formData.append("file", file);
   
   try {
-    const response = await fetch(`${API_BASE_URL}/upload`, {
+    const response = await fetch(`${BACKEND_URL}/upload`, {
       method: "POST",
       body: formData,
     });
@@ -23,7 +23,7 @@ export const uploadFile = async (file) => {
 
 export const getOverviewData = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/overview`);
+    const response = await fetch(`${BACKEND_URL}/overview`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -38,7 +38,7 @@ export const getOverviewData = async () => {
 
 export const getAnomalyData = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/anomalies`);
+    const response = await fetch(`${BACKEND_URL}/anomalies`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
